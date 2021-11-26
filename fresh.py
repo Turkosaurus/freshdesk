@@ -2,7 +2,17 @@ import os
 import json
 import requests
 
-print("--- FRESHDESK ---")
+# https://patorjk.com/software/taag/#p=display&h=3&f=Big&t=fresh.py
+print("""
+   __              _                   
+  / _|            | |                  
+ | |_ _ __ ___ ___| |__    _ __  _   _ 
+ |  _| '__/ _ / __| '_ \  | '_ \| | | |
+ | | | | |  __\__ | | | |_| |_) | |_| |
+ |_| |_|  \___|___|_| |_(_| .__/ \__, |
+                          | |     __/ |
+                          |_|    |___/  
+""")
 
 ## Freshdesk credentials
 # API
