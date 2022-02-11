@@ -1,6 +1,9 @@
 import os
 import json
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 print("--- FRESHDESK ---")
 
@@ -26,6 +29,8 @@ print("Requesting data...")
 
 
 def get_tickets():
+
+    # TODO pagination navigation https://support.freshdesk.com/support/discussions/topics/321689
 
     r = requests.get("https://"+ domain +".freshdesk.com/api/v2/tickets", auth = (api_key, password))
 
