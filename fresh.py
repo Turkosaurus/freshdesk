@@ -40,8 +40,10 @@ print("Requesting data...")
 
 def get_tickets():
 
+    # query = '"status:5"'
+ 
     # TODO pagination navigation https://support.freshdesk.com/support/discussions/topics/321689
-
+    # r = requests.get(f"https://{domain}.freshdesk.com/api/v2/search/tickets?query={query}", auth = (api_key, password))
     r = requests.get("https://"+ domain +".freshdesk.com/api/v2/tickets", auth = (api_key, password))
 
     if r.status_code == 200:
@@ -78,7 +80,8 @@ while active == True:
     if request == 'list':
         print(f"Listing {total} tickets...")
         for ticket in tickets:
-            print(f"{ticket['id']} {ticket['subject']}")
+            print(ticket)
+            # print(f"{ticket['id']} {ticket['subject']}")
 
     # Interrupt
     elif request == 'exit':
